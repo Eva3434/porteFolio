@@ -1,0 +1,229 @@
+/* **************************MISE EN PLACE****************************** */
+
+* {
+    --couleurFond1: wheat;
+    --couleurFond2: rgb(235, 231, 231);
+    --couleurTexte1: black;
+    --couleurTexte2: rgb(70, 68, 68);
+}
+body{
+    margin: 0;
+    min-height: 100vh; 
+}
+/* **************************BARRE DE NAVIGATION*********************** */
+nav {
+    background-color: var(--couleurFond1);
+    color: var(--couleurTexte1);    
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-around;   
+    padding: 30px;      
+}
+
+a {
+    text-decoration: none;
+    color: var(--couleurTexte1);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+@media screen and (max-width: 992px) {
+    nav {
+        padding: 50px;
+    }
+    a {
+        font-size: 30px;
+    }
+  }
+/* **************************TITRES****************************** */
+h1 {
+    font-size: 20px;
+    color: var(--couleurTexte2);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    padding: 2%;
+}
+h2 {
+    font-size: 25px;
+    color: var(--couleurTexte1);
+    text-align: center;
+}
+@media screen and (max-width: 992px) {
+    h2 {
+        font-size: 50px;
+    }
+  }
+/* **************************EXPEREIENCES****************************** */
+.expPro {
+    background-color: var(--couleurFond2);
+    border: 3px solid var(--couleurFond1);
+    border-radius: 10%;
+    margin: 30px 300px;
+}
+.entreprise {
+    font-size: 20px;
+    color: var(--couleurTexte2);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-top: 1%;
+}
+.date {
+    font-size: 20px;
+    color: var(--couleurTexte2);
+    font-family: 'Times New Roman', Times, serif;    
+}
+.poste{
+    font-size: 20px;
+    color: var(--couleurTexte2);
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 1%;
+    margin: 0% 40%;
+    border-bottom: 1px solid;
+    font-weight: bold;
+}
+@media screen and (max-width: 992px) {
+    .expPro {
+        margin: 30px 40px;
+    }
+    .poste {
+        margin: 0% 15%;
+    }
+  }
+/* **************************FORMATION ********************************** */
+.Form {
+    border: 3px solid var(--couleurFond1);
+    border-radius: 10%;
+    margin: 30px 300px;
+}
+
+.dateD {
+    font-size: 20px;
+    color: var(--couleurTexte2);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-top: 1%;
+}
+.centreF {
+    font-size: 20px;
+    color: var(--couleurTexte2);
+    font-family: 'Times New Roman', Times, serif;   
+}
+.diplome {
+    font-size: 20px;
+    color: var(--couleurTexte2);
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 1%;
+    margin: 0% 30%;
+    border-bottom: 1px solid;
+    font-weight: bold;
+}
+section {
+    margin: 0px 20px;
+}
+@media screen and (max-width: 992px) {
+    .Form  {
+        margin: 30px 40px;
+    }
+    .diplome {
+        margin: 0% 15%;
+    }
+}
+/* **************************COMPETENCES****************************** */
+img {
+    clip-path:ellipse(50% 50%);
+    object-fit: cover;
+    width: 15%;
+    height: 15%;
+    display: block;
+    margin: 1% auto;
+
+}
+
+.comp {
+   background-color: var(--couleurFond2);
+   border: 3px solid var(--couleurFond1);
+   border-radius: 10%;
+   margin: 30px 300px;
+}
+
+.nomComp{
+    font-size: 20px;
+    color: var(--couleurTexte2);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-top: 3%;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+.textComp {
+    font-size: 20px;
+    color: var(--couleurTexte2);
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 3%;
+    margin: 0% 5%;
+    border-bottom: 1px solid;
+    text-align: justify;
+
+}
+@media screen and (max-width: 992px) {
+    .comp  {
+        margin: 30px 40px;
+    }
+    .textComp {
+        margin: 0% 15%;
+    }
+    img {
+        width: 40%;    
+  }
+}
+  /* **************************FOOTER ************************************ */
+  footer {
+      background-color: var(--couleurFond1);
+      color: var(--couleurTexte1);
+      font-size: 30px;
+      font-family: 'Times New Roman', Times, serif;
+      padding: 2%;    
+      margin-top: 2%;
+      text-align: center;    
+  }
+  /* **************************FORMULAIRE************************************ */
+  
+  form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--couleurFond1);
+      border-radius: 10%;
+      padding: 3% 10%;
+      margin: 1% 20%;
+  }
+  input {
+      width: 700px;
+      height: 30px;
+      border: none;
+      border-radius: 30px ;  
+  }
+  label {
+      font-size: 20px;
+  }
+  form p {
+      font-size: 20px;
+  }
+  
+  @media screen and (max-width: 992px) {
+      form  {
+          margin: 40px 40px;
+      }
+      label {
+        font-size: 40px;
+        margin: 20px;
+      }
+      form p {
+        font-size: 40px;
+    }
+    input {
+        width: 800px;
+        height: 60px;
+    }
+  }
