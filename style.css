@@ -6,18 +6,36 @@
     --couleurTexte1: black;
     --couleurTexte2: rgb(70, 68, 68);
 }
-body{
+
+body {
     margin: 0;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
+
+#flecheScroll {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    bottom: 50px;
+    right: 40px;
+  }
+  #flecheScroll img {
+    width: 50px;
+  }
+  @media screen and (max-width: 992px) {
+    #flecheScroll img {
+        display:none;
+    }
+  }
+
 /* **************************BARRE DE NAVIGATION*********************** */
 nav {
     background-color: var(--couleurFond1);
-    color: var(--couleurTexte1);    
+    color: var(--couleurTexte1);
     font-family: 'Times New Roman', Times, serif;
     display: flex;
-    justify-content: space-around;   
-    padding: 30px;      
+    justify-content: space-around;
+    padding: 30px;
 }
 
 a {
@@ -25,16 +43,21 @@ a {
     color: var(--couleurTexte1);
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 100%;
 }
+nav a:hover{
+    font-size: 150%;
+    }
 @media screen and (max-width: 992px) {
     nav {
         padding: 50px;
     }
+
     a {
-        font-size: 30px;
+        font-size: 150%;
     }
-  }
+}
+
 /* **************************TITRES****************************** */
 h1 {
     font-size: 20px;
@@ -44,23 +67,27 @@ h1 {
     text-transform: uppercase;
     padding: 2%;
 }
+
 h2 {
-    font-size: 25px;
+    font-size: 160%;
     color: var(--couleurTexte1);
     text-align: center;
 }
+
 @media screen and (max-width: 992px) {
     h2 {
-        font-size: 50px;
+        font-size: 190%;
     }
-  }
+}
+
 /* **************************EXPEREIENCES****************************** */
 .expPro {
     background-color: var(--couleurFond2);
     border: 3px solid var(--couleurFond1);
-    border-radius: 10%;
+    border-radius: 30px;
     margin: 30px 300px;
 }
+
 .entreprise {
     font-size: 20px;
     color: var(--couleurTexte2);
@@ -68,12 +95,14 @@ h2 {
     text-align: center;
     padding-top: 1%;
 }
+
 .date {
     font-size: 20px;
     color: var(--couleurTexte2);
-    font-family: 'Times New Roman', Times, serif;    
+    font-family: 'Times New Roman', Times, serif;
 }
-.poste{
+
+.poste {
     font-size: 20px;
     color: var(--couleurTexte2);
     font-family: 'Times New Roman', Times, serif;
@@ -82,18 +111,21 @@ h2 {
     border-bottom: 1px solid;
     font-weight: bold;
 }
+
 @media screen and (max-width: 992px) {
     .expPro {
         margin: 30px 40px;
     }
+
     .poste {
         margin: 0% 15%;
     }
-  }
+}
+
 /* **************************FORMATION ********************************** */
 .Form {
     border: 3px solid var(--couleurFond1);
-    border-radius: 10%;
+    border-radius: 30px;
     margin: 30px 300px;
 }
 
@@ -104,11 +136,13 @@ h2 {
     text-align: center;
     padding-top: 1%;
 }
+
 .centreF {
     font-size: 20px;
     color: var(--couleurTexte2);
-    font-family: 'Times New Roman', Times, serif;   
+    font-family: 'Times New Roman', Times, serif;
 }
+
 .diplome {
     font-size: 20px;
     color: var(--couleurTexte2);
@@ -118,20 +152,24 @@ h2 {
     border-bottom: 1px solid;
     font-weight: bold;
 }
+
 section {
     margin: 0px 20px;
 }
+
 @media screen and (max-width: 992px) {
-    .Form  {
+    .Form {
         margin: 30px 40px;
     }
+
     .diplome {
         margin: 0% 15%;
     }
 }
+
 /* **************************COMPETENCES****************************** */
-img {
-    clip-path:ellipse(50% 50%);
+.comp img {
+    clip-path: ellipse(50% 50%);
     object-fit: cover;
     width: 15%;
     height: 15%;
@@ -141,13 +179,13 @@ img {
 }
 
 .comp {
-   background-color: var(--couleurFond2);
-   border: 3px solid var(--couleurFond1);
-   border-radius: 10%;
-   margin: 30px 300px;
+    background-color: var(--couleurFond2);
+    border: 3px solid var(--couleurFond1);
+    border-radius: 30px;
+    margin: 30px 300px;
 }
 
-.nomComp{
+.nomComp {
     font-size: 20px;
     color: var(--couleurTexte2);
     font-family: 'Times New Roman', Times, serif;
@@ -156,6 +194,7 @@ img {
     font-weight: bold;
     margin-bottom: 1%;
 }
+
 .textComp {
     font-size: 20px;
     color: var(--couleurTexte2);
@@ -166,64 +205,137 @@ img {
     text-align: justify;
 
 }
+
 @media screen and (max-width: 992px) {
-    .comp  {
+    .comp {
         margin: 30px 40px;
     }
+
     .textComp {
         margin: 0% 15%;
     }
+
     img {
-        width: 40%;    
-  }
+        width: 40%;
+    }
 }
-  /* **************************FOOTER ************************************ */
-  footer {
-      background-color: var(--couleurFond1);
-      color: var(--couleurTexte1);
-      font-size: 30px;
-      font-family: 'Times New Roman', Times, serif;
-      padding: 2%;    
-      margin-top: 2%;
-      text-align: center;    
-  }
-  /* **************************FORMULAIRE************************************ */
-  
-  form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: var(--couleurFond1);
-      border-radius: 10%;
-      padding: 3% 10%;
-      margin: 1% 20%;
-  }
-  input {
-      width: 700px;
-      height: 30px;
-      border: none;
-      border-radius: 30px ;  
-  }
-  label {
-      font-size: 20px;
-  }
-  form p {
-      font-size: 20px;
-  }
-  
-  @media screen and (max-width: 992px) {
-      form  {
-          margin: 40px 40px;
-      }
-      label {
+
+/* **************************FOOTER ************************************ */
+footer {
+    background-color: var(--couleurFond1);
+    color: var(--couleurTexte1);
+    font-size: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 2%;
+    margin-top: 2%;    
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: center; 
+    gap: 40px;    
+}
+@media screen and (max-width: 992px) {
+    footer {
+        font-size: 120%;
+    }
+}
+
+/* **************************FORMULAIRE************************************ */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--couleurFond2);
+    border: 3px solid var(--couleurFond1);
+    border-radius: 30px;
+    padding: 3% 10%;
+    margin: 1% 20%;
+}
+
+input {
+    width: 90%;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+}
+
+label {
+    font-size: 20px;
+}
+
+form p {
+    font-size: 20px;
+}
+
+button {
+    margin-top: 20px;
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+}
+textarea {
+    width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    form {
+        margin: 40px 40px 80px 40px;
+
+    }
+
+    label {
         font-size: 40px;
         margin: 20px;
-      }
-      form p {
+    }
+
+    form p {
         font-size: 40px;
     }
+
     input {
-        width: 800px;
+        width: 80%;
         height: 60px;
     }
-  }
+
+    button {
+        margin-top: 50px;
+        height: 90px;
+        width: 250px;
+        font-size: 30px;
+    }
+
+}
+
+/* **************************PORTE FOLIO************************************ */
+.porteF img {
+    height: auto;
+    width: 20%;
+    margin: 20px;
+    transition: transform .1s;
+}
+img:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+    }
+
+.porteF {
+    background-color: var(--couleurFond2);
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    border: 3px solid var(--couleurFond1);
+}
+
+@media screen and (max-width: 992px) {
+    .porteF {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .porteF img {
+        height: auto;
+        width: 60%;
+    }
+}
